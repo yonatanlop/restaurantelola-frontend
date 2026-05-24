@@ -1,0 +1,465 @@
+/* ============================================
+   RESPONSIVE DESIGN - RESTAURANTE DOÑA LOLA
+   ============================================ */
+
+/* Breakpoints:
+   - Mobile: < 768px
+   - Tablet: 768px - 1024px
+   - Desktop: > 1024px
+   - Large Desktop: > 1440px
+*/
+
+/* ==================== NAVBAR RESPONSIVE ==================== */
+
+/* Tablet y pantallas medianas */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .navbar-brand h1 {
+    font-size: 1.3rem;
+  }
+
+  .navbar-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-logout {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .navbar-brand {
+    width: 100%;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navbar-brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .navbar-icon {
+    font-size: 1.5rem;
+  }
+
+  .navbar-brand h1 {
+    font-size: 1.2rem;
+  }
+
+  .navbar-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: left;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-link-back,
+  .btn-logout {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ==================== DASHBOARD RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .metricas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 1rem;
+  }
+
+  .metricas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-metrica {
+    padding: 1.5rem;
+  }
+
+  .tarjeta-valor {
+    font-size: 2rem;
+  }
+}
+
+/* ==================== VENTAS/POS RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .venta-tactil-page {
+    grid-template-columns: 1fr;
+  }
+
+  .productos-section {
+    order: 2;
+  }
+
+  .carrito-section {
+    order: 1;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 768px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .producto-btn {
+    padding: 1rem;
+    min-height: 100px;
+  }
+
+  .categorias-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .categoria-tab {
+    flex-shrink: 0;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================== MODALES RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    max-width: 95%;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .modal-pago {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .metodos-pago-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teclado-numerico {
+    padding: 1rem;
+  }
+
+  .teclado-numeros {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .btn-teclado {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* ==================== TABLAS RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .tabla-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 600px;
+  }
+
+  th, td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 0.5rem 0.4rem;
+  }
+}
+
+/* ==================== FORMULARIOS RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px; /* Evita zoom en iOS */
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
+
+/* ==================== CONFIGURACIÓN RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .configuracion-container {
+    grid-template-columns: 1fr;
+  }
+
+  .configuracion-sidebar {
+    display: flex;
+    overflow-x: auto;
+    padding: 0.5rem;
+  }
+
+  .sidebar-item {
+    flex-shrink: 0;
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .configuracion-page {
+    padding: 1rem;
+  }
+
+  .configuracion-content {
+    padding: 1.5rem;
+  }
+
+  .impresora-item,
+  .usuario-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .impresora-acciones,
+  .usuario-acciones {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* ==================== COMPRAS/CRÉDITOS RESPONSIVE ==================== */
+
+@media (max-width: 1024px) {
+  .compras-resumen,
+  .creditos-resumen {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clientes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .compras-header,
+  .creditos-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .header-actions button {
+    width: 100%;
+  }
+
+  .compras-resumen,
+  .creditos-resumen {
+    grid-template-columns: 1fr;
+  }
+
+  .clientes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detalle-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .detalle-item select,
+  .detalle-item input {
+    width: 100%;
+  }
+}
+
+/* ==================== UTILIDADES RESPONSIVE ==================== */
+
+/* Ocultar en móvil */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Ocultar en desktop */
+@media (min-width: 769px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Texto responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ==================== ACCESIBILIDAD TÁCTIL ==================== */
+
+/* Asegurar que todos los elementos interactivos sean táctiles (mínimo 44x44px) */
+@media (max-width: 768px) {
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"],
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Mejorar espaciado para dedos */
+  .nav-link,
+  .sidebar-item,
+  .categoria-tab {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ==================== SCROLL SUAVE ==================== */
+
+@media (max-width: 768px) {
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Prevenir zoom en inputs en iOS */
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* ==================== IMPRESIÓN ==================== */
+
+@media print {
+  .navbar,
+  .sidebar,
+  .btn,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  .main-content {
+    padding: 0;
+  }
+
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}

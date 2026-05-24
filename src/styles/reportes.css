@@ -1,0 +1,71 @@
+.reportes-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reportes-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.reportes-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #475569;
+}
+
+.reportes-form select,
+.reportes-form input {
+  margin-top: 0.35rem;
+  padding: 0.6rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #cbd5f5;
+}
+
+.reportes-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.reportes-nota {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  padding: 1rem 1.5rem;
+  color: #475569;
+}
+
+@media (max-width: 768px) {
+  .reportes-form {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .reportes-actions {
+    flex-direction: column;
+  }
+
+  .reportes-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .reportes-form {
+    padding: 0.75rem;
+  }
+
+  .reportes-nota {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+

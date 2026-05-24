@@ -1,0 +1,156 @@
+.gestion-inventario-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.filtros-inventario {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  background: #e2e8f0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filtro-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.insumos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.insumo-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.insumo-card-warning {
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.15);
+}
+
+.insumo-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.insumo-card-header h4 {
+  margin: 0;
+}
+
+.insumo-descripcion {
+  color: #64748b;
+  margin: 0.25rem 0 0;
+}
+
+.insumo-meta,
+.insumo-stock,
+.ajuste-resumen {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.label {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.insumo-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ajuste-resumen {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #e2e8f0;
+}
+
+.toggle-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #cbd5f5;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: #dbeafe;
+  border-color: #2563eb;
+  color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .insumos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insumo-meta,
+  .insumo-stock,
+  .ajuste-resumen {
+    grid-template-columns: 1fr;
+  }
+
+  .filtros-inventario {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .filtro-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .insumo-card {
+    padding: 1rem;
+  }
+
+  .insumo-actions {
+    flex-direction: column;
+  }
+
+  .insumo-actions .btn {
+    width: 100%;
+  }
+
+  .toggle-group {
+    flex-direction: column;
+  }
+
+  .toggle-btn {
+    width: 100%;
+  }
+}
+

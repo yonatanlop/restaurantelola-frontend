@@ -1,0 +1,231 @@
+.compras-page {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.compras-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.compras-header h1 {
+  margin: 0;
+  color: #333;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-nuevo-proveedor,
+.btn-nueva-compra {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-nuevo-proveedor {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-nuevo-proveedor:hover {
+  background: #1976D2;
+}
+
+.btn-nueva-compra {
+  background: #4CAF50;
+  color: white;
+}
+
+.btn-nueva-compra:hover {
+  background: #45a049;
+}
+
+.compras-resumen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.resumen-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.resumen-card.destacado {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.resumen-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.resumen-card .numero {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.lista-compras {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.lista-compras h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.tabla-container {
+  overflow-x: auto;
+}
+
+.tabla-compras {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-compras th,
+.tabla-compras td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla-compras th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.tabla-compras tr:hover {
+  background: #f8f9fa;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge-completada {
+  background: #d4edda;
+  color: #155724;
+}
+
+.badge-cancelada {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Modal de Nueva Compra */
+.modal-compra {
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.detalles-section {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.detalles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.detalles-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.btn-agregar {
+  background: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-agregar:hover {
+  background: #1976D2;
+}
+
+.detalle-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.detalle-item select,
+.detalle-item input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.detalle-item .subtotal {
+  font-weight: bold;
+  color: #333;
+}
+
+.btn-eliminar {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-eliminar:hover {
+  background: #d32f2f;
+}
+
+.total-compra {
+  text-align: right;
+  padding: 15px;
+  background: #e3f2fd;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 18px;
+}

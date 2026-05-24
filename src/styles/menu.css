@@ -1,0 +1,396 @@
+/* Estilos para Gestión de Menú */
+
+.gestion-menu-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-header h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.page-subtitle {
+  color: #7f8c8d;
+  font-size: 1rem;
+  margin: 0.5rem 0 0 0;
+}
+
+/* Filtros */
+.filtros-menu {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.filtros-section {
+  margin-bottom: 1.5rem;
+}
+
+.filtros-section:last-child {
+  margin-bottom: 0;
+}
+
+.filtro-label {
+  display: block;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.filtros-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+  font-size: 1rem;
+  min-height: 50px;
+}
+
+.filtro-btn:hover {
+  border-color: #667eea;
+  background-color: #f8f9ff;
+}
+
+.filtro-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+}
+
+.filtros-resultado {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.resultado-badge {
+  background: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Grid de Platos */
+.platos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Tarjeta de Plato */
+.tarjeta-plato {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-plato:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.tarjeta-plato.inactivo {
+  opacity: 0.6;
+}
+
+.tarjeta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.categoria-badge {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #495057;
+  border: 2px solid #e0e0e0;
+}
+
+.estado-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.estado-badge.activo {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.estado-badge.inactivo {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.tarjeta-body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.plato-nombre {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+}
+
+.plato-descripcion {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  margin: 0 0 1rem 0;
+  min-height: 40px;
+}
+
+.plato-precio {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #10b981;
+  margin: 0;
+}
+
+.tarjeta-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+  background: #f8f9fa;
+}
+
+.btn-action {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  min-height: 50px;
+}
+
+.btn-editar {
+  background: #667eea;
+  color: white;
+}
+
+.btn-editar:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+}
+
+.btn-desactivar {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-desactivar:hover {
+  background: #dc2626;
+}
+
+.btn-activar {
+  background: #10b981;
+  color: white;
+}
+
+.btn-activar:hover {
+  background: #059669;
+}
+
+/* Modal de Plato */
+.modal-plato {
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.textarea-touch {
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+/* Selector de Categorías */
+.categorias-selector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.categoria-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  border: 3px solid #e0e0e0;
+  background: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-height: 100px;
+}
+
+.categoria-btn:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.categoria-btn.selected {
+  border-color: #10b981;
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+}
+
+.cat-icono {
+  font-size: 2.5rem;
+}
+
+.cat-nombre {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+/* Input de Precio */
+.precio-input-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.precio-input {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-teclado-toggle {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-teclado-toggle:hover {
+  background: #667eea;
+  color: white;
+}
+
+.teclado-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Estados Vacíos */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.empty-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.empty-state p {
+  color: #7f8c8d;
+  margin: 0 0 2rem 0;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .platos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .categorias-selector {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .filtros-buttons {
+    flex-direction: column;
+  }
+  
+  .filtro-btn {
+    width: 100%;
+  }
+}
