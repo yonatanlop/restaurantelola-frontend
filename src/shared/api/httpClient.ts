@@ -1,25 +1,12 @@
 import axios from 'axios'
 
-// Detectar automáticamente la URL del backend
-// Si se accede por IP, usar esa IP para el backend también
-const getBaseURL = (): string => {
-  // Prioridad 1: Variable de entorno (si está definida)
-  if (import.meta.env.VITE_API_URL) {
-    return import.meta.env.VITE_API_URL
-  }
-  
-  // Prioridad 2: Detectar automáticamente desde la URL actual
-  const hostname = window.location.hostname
-  const port = '8080'
-  
-  // Si es localhost, usar localhost
-  if (hostname === 'localhost' || hostname === '127.0.0.1') {
-    return `http://localhost:${port}`
-  }
-  
-  // Si es una IP, usar esa IP
-  return `http://${hostname}:${port}`
-}
+// Por defecto se usan rutas relativas ("/api/...", mismo origen que sirvio
+// el frontend): tanto "npm run dev" (proxy de vite.config.ts) como el Nginx
+// del contenedor Docker (nginx.conf) ya reenvian /api al backend, asi que no
+// hace falta saber su host:puerto de antemano. VITE_API_URL solo hace falta
+// para un caso especial (backend en otro origen distinto al que sirve el
+// frontend).
+const getBaseURL = (): string => import.meta.env.VITE_API_URL || ''
 
 const httpClient = axios.create({
   baseURL: getBaseURL(),

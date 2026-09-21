@@ -1,6 +1,6 @@
-import axios from 'axios'
+import httpClient from '@/shared/api/httpClient'
 
-const API_URL = 'http://localhost:8080/api/caja-registradora'
+const API_URL = '/api/caja-registradora'
 
 export interface EstadoCajaRegistradora {
   habilitada: boolean
@@ -17,7 +17,7 @@ export interface RespuestaAbrirCajon {
  * Abre el cajón de la caja registradora
  */
 export const abrirCajon = async (): Promise<RespuestaAbrirCajon> => {
-  const response = await axios.post<RespuestaAbrirCajon>(`${API_URL}/abrir-cajon`)
+  const response = await httpClient.post<RespuestaAbrirCajon>(`${API_URL}/abrir-cajon`)
   return response.data
 }
 
@@ -25,6 +25,6 @@ export const abrirCajon = async (): Promise<RespuestaAbrirCajon> => {
  * Obtiene el estado de la caja registradora
  */
 export const obtenerEstado = async (): Promise<EstadoCajaRegistradora> => {
-  const response = await axios.get<EstadoCajaRegistradora>(`${API_URL}/estado`)
+  const response = await httpClient.get<EstadoCajaRegistradora>(`${API_URL}/estado`)
   return response.data
 }

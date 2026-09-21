@@ -1,11 +1,11 @@
-import axios from 'axios';
+import httpClient from '@/shared/api/httpClient';
 import { DashboardData } from '../types/dashboard.types';
 
-const API_URL = 'http://localhost:8080/api/dashboard';
+const API_URL = '/api/dashboard';
 
 export const dashboardService = {
   obtenerDashboard: async (): Promise<DashboardData> => {
-    const response = await axios.get(API_URL);
+    const response = await httpClient.get(API_URL);
     return response.data;
   }
 };

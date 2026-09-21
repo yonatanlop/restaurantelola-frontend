@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Proveedor, CompraDetalle } from '../types/compras.types';
 import { comprasApi } from '../services/comprasApi';
-import axios from 'axios';
+import httpClient from '@/shared/api/httpClient';
 import { formatearMoneda } from '@/shared/utils/formatters';
 
 interface ModalNuevaCompraProps {
@@ -33,7 +33,7 @@ export const ModalNuevaCompra: React.FC<ModalNuevaCompraProps> = ({
 
   const cargarInsumos = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/api/insumos');
+      const response = await httpClient.get('/api/insumos');
       setInsumos(response.data);
     } catch (error) {
       console.error('Error al cargar insumos:', error);
